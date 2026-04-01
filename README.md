@@ -2,7 +2,7 @@
 
 ## 📌 Description
 
--
+SageMath was used to implement Capacitated Multi-Source Multi-Sink Minimum Cost Flow Model to optimize emergency evacuation routes in Federizo Hall in Bulacan State University - Main Campus. The project models the building as directed weighted graph and applies Successive Shortest Path Algorithm to distribute the evacuees across exits and evacuation sites under baseline and obstructed scenarios.
 
 ---
 
