@@ -1,0 +1,692 @@
+=================================================================
+  FEDERIZO HALL — EVACUATION FLOW OPTIMIZER
+  SENSITIVITY ANALYSIS SCENARIO:
+    * EA_FRONT = 1400 m2 (reduced from 2800 m2)
+    * CENTER STAIRWELL DISABLED (fire/impassable)
+    * evac_minutes = 17 min (raised from 15 — degraded egress)
+  Capacitated Multi-Source Multi-Sink Minimum Cost Flow
+  BulSU Main Campus
+=================================================================
+
+  Evacuation Area Capacities:
+    EA_FRONT      1400.00000000000 m2  ->   2592 persons
+    EA_LEFT       270.000000000000 m2  ->    499 persons
+    EA_RIGHT      185.000000000000 m2  ->    342 persons
+    TOTAL                       3433 persons
+
+=================================================================
+  DAY: Monday   |   Total Evacuees (S) = 2335
+=================================================================
+
+  Optimal Total Cost Z = 96739.00 (person-seconds)
+
+  Edge                                                 Cap    Flow   Cost   Util%
+  --------------------------------------------------------------------------------
+  GF_FH106 → GF_JUNC_LEFT                              720    53.0      5    7.4%
+  GF_FH107 → GF_JUNC_LEFT                              720    56.0      7    7.8%
+  GF_FH108 → GF_JUNC_LEFT                              600    38.0      8    6.3%
+  GF_MTLABA → GF_JUNC_LEFT                             720    45.0     10    6.2%
+  GF_MTLABB → GF_JUNC_LEFT                             720    41.0     12    5.7%
+  GF_GS → GF_JUNC_LEFT                                 600    12.0      4    2.0%
+  GF_PSR → GF_JUNC_LEFT                                540     5.0      5    0.9%
+  GF_FR → GF_JUNC_LEFT                                 600    40.0      6    6.7%
+  GF_CSR → GF_JUNC_LEFT                                540     5.0      5    0.9%
+  GF_FH110 → GF_JUNC_CENTER                            720    59.0      5    8.2%
+  GF_JUNC_RIGHT → GF_JUNC_CENTER                      1440   439.0     17   30.5%
+  GF_JUNC_LEFT → GF_MAINEXIT1                         1080   414.0      3   38.3%
+  GF_JUNC_LEFT → GF_MAINEXIT2                         1080  1080.0      3  100.0%  ⚠ BOTTLENECK
+  GF_JUNC_LEFT → GF_MAINEXIT3                         1080     1.0      7    0.1%
+  GF_JUNC_CENTER → GF_MAINEXIT4                       1200   498.0      3   41.5%
+  GF_JUNC_RIGHT → GF_MAINEXIT6                        1080   342.0      3   31.7%
+  GF_MAINEXIT1 → EA_FRONT                             1080   414.0     13   38.3%
+  GF_MAINEXIT2 → EA_FRONT                             1080  1080.0     10  100.0%  ⚠ BOTTLENECK
+  GF_MAINEXIT3 → EA_LEFT                              1080     1.0      8    0.1%
+  GF_MAINEXIT4 → EA_LEFT                              1200   498.0      7   41.5%
+  GF_MAINEXIT6 → EA_RIGHT                             1080   342.0      8   31.7%
+  SF_FH201A → SF_JUNC_LEFT                             720    47.0      5    6.5%
+  SF_FH201B → SF_JUNC_LEFT                             720    60.0      7    8.3%
+  SF_FH202 → SF_JUNC_LEFT                              720    61.0      8    8.5%
+  SF_FH205 → SF_JUNC_LEFT                              720    29.0     12    4.0%
+  SF_FH206 → SF_JUNC_LEFT                              720    49.0     13    6.8%
+  SF_FH207 → SF_JUNC_LEFT                              720    49.0     15    6.8%
+  SF_RE → SF_JUNC_LEFT                                 600    44.0      4    7.3%
+  SF_CSAR → SF_JUNC_LEFT                               900    67.0      6    7.4%
+  SF_AVRA → SF_JUNC_CENTER                             900    46.0      5    5.1%
+  SF_AVRB → SF_JUNC_CENTER                             900    36.0      5    4.0%
+  SF_FH208 → SF_JUNC_CENTER                            720    47.0      7    6.5%
+  SF_FH209 → SF_JUNC_CENTER                            720    56.0      8    7.8%
+  SF_FH210 → SF_JUNC_CENTER                            720    34.0      8    4.7%
+  SF_MMR → SF_JUNC_CENTER                              720    51.0      5    7.1%
+  SF_OCL2 → SF_JUNC_RIGHT                              720    53.0      7    7.4%
+  SF_SL → SF_JUNC_RIGHT                                720    47.0      8    6.5%
+  SF_OCL → SF_JUNC_RIGHT                               720    51.0     10    7.1%
+  SF_CTA → SF_JUNC_RIGHT                               720    53.0     12    7.4%
+  SF_CTB → SF_JUNC_RIGHT                               720    56.0     13    7.8%
+  SF_CTC → SF_JUNC_RIGHT                               720    56.0     15    7.8%
+  SF_DO → SF_JUNC_RIGHT                                540     6.0      3    1.1%
+  SF_FR → SF_JUNC_RIGHT                                600    30.0      4    5.0%
+  SF_JUNC_CENTER → SF_JUNC_LEFT                       1440    66.0     18    4.6%
+  SF_JUNC_CENTER → SF_JUNC_RIGHT                      1440   204.0     18   14.2%
+  SF_JUNC_LEFT → LEFT_STAIR_S2G                       1200  1200.0      4  100.0%  ⚠ BOTTLENECK
+  SF_JUNC_RIGHT → RIGHT_STAIR_S2G                     1200   781.0      4   65.1%
+  LEFT_STAIR_S2G → GF_JUNC_LEFT                       1200  1200.0      6  100.0%  ⚠ BOTTLENECK
+  RIGHT_STAIR_S2G → GF_JUNC_RIGHT                     1200   781.0      6   65.1%
+  TF_FH301A → TF_JUNC_LEFT                             720    55.0      5    7.6%
+  TF_FH302 → TF_JUNC_LEFT                              720    53.0      7    7.4%
+  TF_FH303 → TF_JUNC_LEFT                              720    50.0      8    6.9%
+  TF_FH304 → TF_JUNC_LEFT                              720    50.0     10    6.9%
+  TF_FH305 → TF_JUNC_LEFT                              720    51.0     12    7.1%
+  TF_FH306 → TF_JUNC_LEFT                              720    56.0     13    7.8%
+  TF_FH307 → TF_JUNC_LEFT                              720    51.0     15    7.1%
+  TF_FH308 → TF_JUNC_CENTER                            720    55.0      5    7.6%
+  TF_FH309 → TF_JUNC_CENTER                            720    46.0      7    6.4%
+  TF_FH311A → TF_JUNC_CENTER                           720    57.0      8    7.9%
+  TF_FH311B → TF_JUNC_CENTER                           720    47.0      8    6.5%
+  TF_FHCL → TF_JUNC_CENTER                             900    55.0      5    6.1%
+  TF_OAC → TF_JUNC_CENTER                              720    53.0      5    7.4%
+  TF_FHTL → TF_JUNC_CENTER                             720    49.0      7    6.8%
+  TF_FH314 → TF_JUNC_RIGHT                             720    47.0      7    6.5%
+  TF_FH315 → TF_JUNC_RIGHT                             720    42.0      8    5.8%
+  TF_FH316 → TF_JUNC_RIGHT                             720    43.0     10    6.0%
+  TF_FH317 → TF_JUNC_RIGHT                             720    53.0     12    7.4%
+  TF_DO → TF_JUNC_RIGHT                                540     5.0      3    0.9%
+  TF_FR → TF_JUNC_RIGHT                                600    35.0      4    5.8%
+  TF_JUNC_CENTER → TF_JUNC_LEFT                       1440   362.0     18   25.1%
+  TF_JUNC_LEFT → LEFT_STAIR_T2S                       1200   728.0      4   60.7%
+  TF_JUNC_RIGHT → RIGHT_STAIR_T2S                     1200   225.0      4   18.8%
+  LEFT_STAIR_T2S → SF_JUNC_LEFT                       1200   728.0      6   60.7%
+  RIGHT_STAIR_T2S → SF_JUNC_RIGHT                     1200   225.0      6   18.8%
+
+  Evacuation Area        Capacity   Received    Util%
+  ----------------------------------------------------
+  EA_FRONT                   2592     1494.0    57.6%
+  EA_LEFT                     499      499.0   100.0%
+  EA_RIGHT                    342      342.0   100.0%
+
+  ⚠  BOTTLENECK EDGES (>=90% utilization):
+     GF_JUNC_LEFT → GF_MAINEXIT2  |  Flow: 1080.0/1080  (100.0%)
+     GF_MAINEXIT2 → EA_FRONT  |  Flow: 1080.0/1080  (100.0%)
+     SF_JUNC_LEFT → LEFT_STAIR_S2G  |  Flow: 1200.0/1200  (100.0%)
+     LEFT_STAIR_S2G → GF_JUNC_LEFT  |  Flow: 1200.0/1200  (100.0%)
+
+=================================================================
+  DAY: Tuesday   |   Total Evacuees (S) = 2306
+=================================================================
+
+  Optimal Total Cost Z = 95453.00 (person-seconds)
+
+  Edge                                                 Cap    Flow   Cost   Util%
+  --------------------------------------------------------------------------------
+  GF_FH106 → GF_JUNC_LEFT                              720    53.0      5    7.4%
+  GF_FH107 → GF_JUNC_LEFT                              720    49.0      7    6.8%
+  GF_FH108 → GF_JUNC_LEFT                              600    42.0      8    7.0%
+  GF_MTLABA → GF_JUNC_LEFT                             720    45.0     10    6.2%
+  GF_MTLABB → GF_JUNC_LEFT                             720    44.0     12    6.1%
+  GF_GS → GF_JUNC_LEFT                                 600    12.0      4    2.0%
+  GF_PSR → GF_JUNC_LEFT                                540     5.0      5    0.9%
+  GF_FR → GF_JUNC_LEFT                                 600    40.0      6    6.7%
+  GF_CSR → GF_JUNC_LEFT                                540     5.0      5    0.9%
+  GF_FH110 → GF_JUNC_CENTER                            720    59.0      5    8.2%
+  GF_JUNC_RIGHT → GF_JUNC_CENTER                      1440   410.0     17   28.5%
+  GF_JUNC_LEFT → GF_MAINEXIT1                         1080   385.0      3   35.6%
+  GF_JUNC_LEFT → GF_MAINEXIT2                         1080  1080.0      3  100.0%  ⚠ BOTTLENECK
+  GF_JUNC_LEFT → GF_MAINEXIT3                         1080    30.0      7    2.8%
+  GF_JUNC_CENTER → GF_MAINEXIT4                       1200   469.0      3   39.1%
+  GF_JUNC_RIGHT → GF_MAINEXIT6                        1080   342.0      3   31.7%
+  GF_MAINEXIT1 → EA_FRONT                             1080   385.0     13   35.6%
+  GF_MAINEXIT2 → EA_FRONT                             1080  1080.0     10  100.0%  ⚠ BOTTLENECK
+  GF_MAINEXIT3 → EA_LEFT                              1080    30.0      8    2.8%
+  GF_MAINEXIT4 → EA_LEFT                              1200   469.0      7   39.1%
+  GF_MAINEXIT6 → EA_RIGHT                             1080   342.0      8   31.7%
+  SF_FH201A → SF_JUNC_LEFT                             720    59.0      5    8.2%
+  SF_FH201B → SF_JUNC_LEFT                             720    61.0      7    8.5%
+  SF_FH202 → SF_JUNC_LEFT                              720    44.0      8    6.1%
+  SF_FH205 → SF_JUNC_LEFT                              720    46.0     12    6.4%
+  SF_FH206 → SF_JUNC_LEFT                              720    50.0     13    6.9%
+  SF_FH207 → SF_JUNC_LEFT                              720    37.0     15    5.1%
+  SF_RE → SF_JUNC_LEFT                                 600    34.0      4    5.7%
+  SF_CSAR → SF_JUNC_LEFT                               900    47.0      6    5.2%
+  SF_AVRA → SF_JUNC_CENTER                             900    47.0      5    5.2%
+  SF_AVRB → SF_JUNC_CENTER                             900    45.0      5    5.0%
+  SF_FH208 → SF_JUNC_CENTER                            720    48.0      7    6.7%
+  SF_FH209 → SF_JUNC_CENTER                            720    57.0      8    7.9%
+  SF_FH210 → SF_JUNC_CENTER                            720    34.0      8    4.7%
+  SF_MMR → SF_JUNC_CENTER                              720    56.0      5    7.8%
+  SF_STD → SF_JUNC_CENTER                              720    51.0      5    7.1%
+  SF_OCL2 → SF_JUNC_RIGHT                              720    51.0      7    7.1%
+  SF_SL → SF_JUNC_RIGHT                                720    48.0      8    6.7%
+  SF_OCL → SF_JUNC_RIGHT                               720    52.0     10    7.2%
+  SF_CTA → SF_JUNC_RIGHT                               720    48.0     12    6.7%
+  SF_CTB → SF_JUNC_RIGHT                               720    49.0     13    6.8%
+  SF_CTC → SF_JUNC_RIGHT                               720    51.0     15    7.1%
+  SF_DO → SF_JUNC_RIGHT                                540     6.0      3    1.1%
+  SF_FR → SF_JUNC_RIGHT                                600    30.0      4    5.0%
+  SF_JUNC_CENTER → SF_JUNC_LEFT                       1440   163.0     18   11.3%
+  SF_JUNC_CENTER → SF_JUNC_RIGHT                      1440   175.0     18   12.2%
+  SF_JUNC_LEFT → LEFT_STAIR_S2G                       1200  1200.0      4  100.0%  ⚠ BOTTLENECK
+  SF_JUNC_RIGHT → RIGHT_STAIR_S2G                     1200   752.0      4   62.7%
+  LEFT_STAIR_S2G → GF_JUNC_LEFT                       1200  1200.0      6  100.0%  ⚠ BOTTLENECK
+  RIGHT_STAIR_S2G → GF_JUNC_RIGHT                     1200   752.0      6   62.7%
+  TF_FH301A → TF_JUNC_LEFT                             720    31.0      5    4.3%
+  TF_FH302 → TF_JUNC_LEFT                              720    49.0      7    6.8%
+  TF_FH303 → TF_JUNC_LEFT                              720    53.0      8    7.4%
+  TF_FH304 → TF_JUNC_LEFT                              720    47.0     10    6.5%
+  TF_FH305 → TF_JUNC_LEFT                              720    40.0     12    5.6%
+  TF_FH306 → TF_JUNC_LEFT                              720    49.0     13    6.8%
+  TF_FH307 → TF_JUNC_LEFT                              720    57.0     15    7.9%
+  TF_FH308 → TF_JUNC_CENTER                            720    46.0      5    6.4%
+  TF_FH309 → TF_JUNC_CENTER                            720    53.0      7    7.4%
+  TF_FH311A → TF_JUNC_CENTER                           720    54.0      8    7.5%
+  TF_FH311B → TF_JUNC_CENTER                           720    46.0      8    6.4%
+  TF_FHCL → TF_JUNC_CENTER                             900    38.0      5    4.2%
+  TF_OAC → TF_JUNC_CENTER                              720    53.0      5    7.4%
+  TF_FHTL → TF_JUNC_CENTER                             720    43.0      7    6.0%
+  TF_FH314 → TF_JUNC_RIGHT                             720    57.0      7    7.9%
+  TF_FH315 → TF_JUNC_RIGHT                             720    49.0      8    6.8%
+  TF_FH316 → TF_JUNC_RIGHT                             720    43.0     10    6.0%
+  TF_FH317 → TF_JUNC_RIGHT                             720    53.0     12    7.4%
+  TF_DO → TF_JUNC_RIGHT                                540     5.0      3    0.9%
+  TF_FR → TF_JUNC_RIGHT                                600    35.0      4    5.8%
+  TF_JUNC_CENTER → TF_JUNC_LEFT                       1440   333.0     18   23.1%
+  TF_JUNC_LEFT → LEFT_STAIR_T2S                       1200   659.0      4   54.9%
+  TF_JUNC_RIGHT → RIGHT_STAIR_T2S                     1200   242.0      4   20.2%
+  LEFT_STAIR_T2S → SF_JUNC_LEFT                       1200   659.0      6   54.9%
+  RIGHT_STAIR_T2S → SF_JUNC_RIGHT                     1200   242.0      6   20.2%
+
+  Evacuation Area        Capacity   Received    Util%
+  ----------------------------------------------------
+  EA_FRONT                   2592     1465.0    56.5%
+  EA_LEFT                     499      499.0   100.0%
+  EA_RIGHT                    342      342.0   100.0%
+
+  ⚠  BOTTLENECK EDGES (>=90% utilization):
+     GF_JUNC_LEFT → GF_MAINEXIT2  |  Flow: 1080.0/1080  (100.0%)
+     GF_MAINEXIT2 → EA_FRONT  |  Flow: 1080.0/1080  (100.0%)
+     SF_JUNC_LEFT → LEFT_STAIR_S2G  |  Flow: 1200.0/1200  (100.0%)
+     LEFT_STAIR_S2G → GF_JUNC_LEFT  |  Flow: 1200.0/1200  (100.0%)
+
+=================================================================
+  DAY: Wednesday   |   Total Evacuees (S) = 2302
+=================================================================
+
+  Optimal Total Cost Z = 95575.00 (person-seconds)
+
+  Edge                                                 Cap    Flow   Cost   Util%
+  --------------------------------------------------------------------------------
+  GF_FH106 → GF_JUNC_LEFT                              720    53.0      5    7.4%
+  GF_FH107 → GF_JUNC_LEFT                              720    33.0      7    4.6%
+  GF_FH108 → GF_JUNC_LEFT                              600    38.0      8    6.3%
+  GF_MTLABA → GF_JUNC_LEFT                             720    43.0     10    6.0%
+  GF_MTLABB → GF_JUNC_LEFT                             720    44.0     12    6.1%
+  GF_GS → GF_JUNC_LEFT                                 600    12.0      4    2.0%
+  GF_PSR → GF_JUNC_LEFT                                540     5.0      5    0.9%
+  GF_FR → GF_JUNC_LEFT                                 600    40.0      6    6.7%
+  GF_CSR → GF_JUNC_LEFT                                540     5.0      5    0.9%
+  GF_FH110 → GF_JUNC_CENTER                            720    59.0      5    8.2%
+  GF_JUNC_RIGHT → GF_JUNC_CENTER                      1440   428.0     17   29.7%
+  GF_JUNC_LEFT → GF_MAINEXIT1                         1080   381.0      3   35.3%
+  GF_JUNC_LEFT → GF_MAINEXIT2                         1080  1080.0      3  100.0%  ⚠ BOTTLENECK
+  GF_JUNC_LEFT → GF_MAINEXIT3                         1080    12.0      7    1.1%
+  GF_JUNC_CENTER → GF_MAINEXIT4                       1200   487.0      3   40.6%
+  GF_JUNC_RIGHT → GF_MAINEXIT6                        1080   342.0      3   31.7%
+  GF_MAINEXIT1 → EA_FRONT                             1080   381.0     13   35.3%
+  GF_MAINEXIT2 → EA_FRONT                             1080  1080.0     10  100.0%  ⚠ BOTTLENECK
+  GF_MAINEXIT3 → EA_LEFT                              1080    12.0      8    1.1%
+  GF_MAINEXIT4 → EA_LEFT                              1200   487.0      7   40.6%
+  GF_MAINEXIT6 → EA_RIGHT                             1080   342.0      8   31.7%
+  SF_FH201A → SF_JUNC_LEFT                             720    59.0      5    8.2%
+  SF_FH201B → SF_JUNC_LEFT                             720    48.0      7    6.7%
+  SF_FH202 → SF_JUNC_LEFT                              720    47.0      8    6.5%
+  SF_FH205 → SF_JUNC_LEFT                              720    60.0     12    8.3%
+  SF_FH206 → SF_JUNC_LEFT                              720    60.0     13    8.3%
+  SF_FH207 → SF_JUNC_LEFT                              720    44.0     15    6.1%
+  SF_RE → SF_JUNC_LEFT                                 600    44.0      4    7.3%
+  SF_CSAR → SF_JUNC_LEFT                               900    44.0      6    4.9%
+  SF_AVRA → SF_JUNC_CENTER                             900    61.0      5    6.8%
+  SF_AVRB → SF_JUNC_CENTER                             900    45.0      5    5.0%
+  SF_FH208 → SF_JUNC_CENTER                            720    51.0      7    7.1%
+  SF_FH209 → SF_JUNC_CENTER                            720    44.0      8    6.1%
+  SF_FH210 → SF_JUNC_CENTER                            720    29.0      8    4.0%
+  SF_MMR → SF_JUNC_CENTER                              720    46.0      5    6.4%
+  SF_STD → SF_JUNC_CENTER                              720    50.0      5    6.9%
+  SF_OCL2 → SF_JUNC_RIGHT                              720    49.0      7    6.8%
+  SF_SL → SF_JUNC_RIGHT                                720    49.0      8    6.8%
+  SF_OCL → SF_JUNC_RIGHT                               720    53.0     10    7.4%
+  SF_CTA → SF_JUNC_RIGHT                               720    49.0     12    6.8%
+  SF_CTB → SF_JUNC_RIGHT                               720    47.0     13    6.5%
+  SF_CTC → SF_JUNC_RIGHT                               720    44.0     15    6.1%
+  SF_DO → SF_JUNC_RIGHT                                540     6.0      3    1.1%
+  SF_FR → SF_JUNC_RIGHT                                600    30.0      4    5.0%
+  SF_JUNC_CENTER → SF_JUNC_LEFT                       1440   118.0     18    8.2%
+  SF_JUNC_CENTER → SF_JUNC_RIGHT                      1440   208.0     18   14.4%
+  SF_JUNC_LEFT → LEFT_STAIR_S2G                       1200  1200.0      4  100.0%  ⚠ BOTTLENECK
+  SF_JUNC_RIGHT → RIGHT_STAIR_S2G                     1200   770.0      4   64.2%
+  LEFT_STAIR_S2G → GF_JUNC_LEFT                       1200  1200.0      6  100.0%  ⚠ BOTTLENECK
+  RIGHT_STAIR_S2G → GF_JUNC_RIGHT                     1200   770.0      6   64.2%
+  TF_FH301A → TF_JUNC_LEFT                             720    55.0      5    7.6%
+  TF_FH302 → TF_JUNC_LEFT                              720    47.0      7    6.5%
+  TF_FH303 → TF_JUNC_LEFT                              720    49.0      8    6.8%
+  TF_FH304 → TF_JUNC_LEFT                              720    38.0     10    5.3%
+  TF_FH305 → TF_JUNC_LEFT                              720    55.0     12    7.6%
+  TF_FH306 → TF_JUNC_LEFT                              720    56.0     13    7.8%
+  TF_FH307 → TF_JUNC_LEFT                              720    46.0     15    6.4%
+  TF_FH308 → TF_JUNC_CENTER                            720    43.0      5    6.0%
+  TF_FH309 → TF_JUNC_CENTER                            720    47.0      7    6.5%
+  TF_FH311A → TF_JUNC_CENTER                           720    47.0      8    6.5%
+  TF_FH311B → TF_JUNC_CENTER                           720    43.0      8    6.0%
+  TF_FHCL → TF_JUNC_CENTER                             900    42.0      5    4.7%
+  TF_OAC → TF_JUNC_CENTER                              720    51.0      5    7.1%
+  TF_FHTL → TF_JUNC_CENTER                             720    57.0      7    7.9%
+  TF_FH314 → TF_JUNC_RIGHT                             720    57.0      7    7.9%
+  TF_FH315 → TF_JUNC_RIGHT                             720    47.0      8    6.5%
+  TF_FH316 → TF_JUNC_RIGHT                             720    41.0     10    5.7%
+  TF_FH317 → TF_JUNC_RIGHT                             720    50.0     12    6.9%
+  TF_DO → TF_JUNC_RIGHT                                540     5.0      3    0.9%
+  TF_FR → TF_JUNC_RIGHT                                600    35.0      4    5.8%
+  TF_JUNC_CENTER → TF_JUNC_LEFT                       1440   330.0     18   22.9%
+  TF_JUNC_LEFT → LEFT_STAIR_T2S                       1200   676.0      4   56.3%
+  TF_JUNC_RIGHT → RIGHT_STAIR_T2S                     1200   235.0      4   19.6%
+  LEFT_STAIR_T2S → SF_JUNC_LEFT                       1200   676.0      6   56.3%
+  RIGHT_STAIR_T2S → SF_JUNC_RIGHT                     1200   235.0      6   19.6%
+
+  Evacuation Area        Capacity   Received    Util%
+  ----------------------------------------------------
+  EA_FRONT                   2592     1461.0    56.4%
+  EA_LEFT                     499      499.0   100.0%
+  EA_RIGHT                    342      342.0   100.0%
+
+  ⚠  BOTTLENECK EDGES (>=90% utilization):
+     GF_JUNC_LEFT → GF_MAINEXIT2  |  Flow: 1080.0/1080  (100.0%)
+     GF_MAINEXIT2 → EA_FRONT  |  Flow: 1080.0/1080  (100.0%)
+     SF_JUNC_LEFT → LEFT_STAIR_S2G  |  Flow: 1200.0/1200  (100.0%)
+     LEFT_STAIR_S2G → GF_JUNC_LEFT  |  Flow: 1200.0/1200  (100.0%)
+
+=================================================================
+  DAY: Thursday   |   Total Evacuees (S) = 2346
+=================================================================
+
+  Optimal Total Cost Z = 97790.00 (person-seconds)
+
+  Edge                                                 Cap    Flow   Cost   Util%
+  --------------------------------------------------------------------------------
+  GF_FH106 → GF_JUNC_LEFT                              720    56.0      5    7.8%
+  GF_FH107 → GF_JUNC_LEFT                              720    59.0      7    8.2%
+  GF_FH108 → GF_JUNC_LEFT                              600    39.0      8    6.5%
+  GF_MTLABA → GF_JUNC_LEFT                             720    45.0     10    6.2%
+  GF_MTLABB → GF_JUNC_LEFT                             720    41.0     12    5.7%
+  GF_GS → GF_JUNC_LEFT                                 600    12.0      4    2.0%
+  GF_PSR → GF_JUNC_LEFT                                540     5.0      5    0.9%
+  GF_FR → GF_JUNC_LEFT                                 600    40.0      6    6.7%
+  GF_CSR → GF_JUNC_LEFT                                540     5.0      5    0.9%
+  GF_FH110 → GF_JUNC_CENTER                            720    53.0      5    7.4%
+  GF_JUNC_CENTER → GF_JUNC_LEFT                       1440     3.0     17    0.2%
+  GF_JUNC_RIGHT → GF_JUNC_CENTER                      1440   449.0     17   31.2%
+  GF_JUNC_LEFT → GF_MAINEXIT1                         1080   425.0      3   39.4%
+  GF_JUNC_LEFT → GF_MAINEXIT2                         1080  1080.0      3  100.0%  ⚠ BOTTLENECK
+  GF_JUNC_CENTER → GF_MAINEXIT4                       1200   499.0      3   41.6%
+  GF_JUNC_RIGHT → GF_MAINEXIT6                        1080   342.0      3   31.7%
+  GF_MAINEXIT1 → EA_FRONT                             1080   425.0     13   39.4%
+  GF_MAINEXIT2 → EA_FRONT                             1080  1080.0     10  100.0%  ⚠ BOTTLENECK
+  GF_MAINEXIT4 → EA_LEFT                              1200   499.0      7   41.6%
+  GF_MAINEXIT6 → EA_RIGHT                             1080   342.0      8   31.7%
+  SF_FH201A → SF_JUNC_LEFT                             720    47.0      5    6.5%
+  SF_FH201B → SF_JUNC_LEFT                             720    53.0      7    7.4%
+  SF_FH202 → SF_JUNC_LEFT                              720    61.0      8    8.5%
+  SF_FH205 → SF_JUNC_LEFT                              720    56.0     12    7.8%
+  SF_FH206 → SF_JUNC_LEFT                              720    56.0     13    7.8%
+  SF_FH207 → SF_JUNC_LEFT                              720    56.0     15    7.8%
+  SF_RE → SF_JUNC_LEFT                                 600    47.0      4    7.8%
+  SF_CSAR → SF_JUNC_LEFT                               900    46.0      6    5.1%
+  SF_AVRA → SF_JUNC_CENTER                             900    47.0      5    5.2%
+  SF_AVRB → SF_JUNC_CENTER                             900    59.0      5    6.6%
+  SF_FH208 → SF_JUNC_CENTER                            720    44.0      7    6.1%
+  SF_FH209 → SF_JUNC_CENTER                            720    53.0      8    7.4%
+  SF_FH210 → SF_JUNC_CENTER                            720    52.0      8    7.2%
+  SF_MMR → SF_JUNC_CENTER                              720    49.0      5    6.8%
+  SF_STD → SF_JUNC_CENTER                              720    53.0      5    7.4%
+  SF_OCL2 → SF_JUNC_RIGHT                              720    53.0      7    7.4%
+  SF_SL → SF_JUNC_RIGHT                                720    45.0      8    6.2%
+  SF_OCL → SF_JUNC_RIGHT                               720    56.0     10    7.8%
+  SF_CTA → SF_JUNC_RIGHT                               720    36.0     12    5.0%
+  SF_CTB → SF_JUNC_RIGHT                               720    35.0     13    4.9%
+  SF_CTC → SF_JUNC_RIGHT                               720    56.0     15    7.8%
+  SF_DO → SF_JUNC_RIGHT                                540     6.0      3    1.1%
+  SF_FR → SF_JUNC_RIGHT                                600    30.0      4    5.0%
+  SF_JUNC_CENTER → SF_JUNC_LEFT                       1440   119.0     18    8.3%
+  SF_JUNC_CENTER → SF_JUNC_RIGHT                      1440   238.0     18   16.5%
+  SF_JUNC_LEFT → LEFT_STAIR_S2G                       1200  1200.0      4  100.0%  ⚠ BOTTLENECK
+  SF_JUNC_RIGHT → RIGHT_STAIR_S2G                     1200   791.0      4   65.9%
+  LEFT_STAIR_S2G → GF_JUNC_LEFT                       1200  1200.0      6  100.0%  ⚠ BOTTLENECK
+  RIGHT_STAIR_S2G → GF_JUNC_RIGHT                     1200   791.0      6   65.9%
+  TF_FH301A → TF_JUNC_LEFT                             720    47.0      5    6.5%
+  TF_FH302 → TF_JUNC_LEFT                              720    45.0      7    6.2%
+  TF_FH303 → TF_JUNC_LEFT                              720    43.0      8    6.0%
+  TF_FH304 → TF_JUNC_LEFT                              720    41.0     10    5.7%
+  TF_FH305 → TF_JUNC_LEFT                              720    43.0     12    6.0%
+  TF_FH306 → TF_JUNC_LEFT                              720    51.0     13    7.1%
+  TF_FH307 → TF_JUNC_LEFT                              720    46.0     15    6.4%
+  TF_FH308 → TF_JUNC_CENTER                            720    47.0      5    6.5%
+  TF_FH309 → TF_JUNC_CENTER                            720    49.0      7    6.8%
+  TF_FH311A → TF_JUNC_CENTER                           720    51.0      8    7.1%
+  TF_FH311B → TF_JUNC_CENTER                           720    49.0      8    6.8%
+  TF_FHCL → TF_JUNC_CENTER                             900    40.0      5    4.4%
+  TF_OAC → TF_JUNC_CENTER                              720    50.0      5    6.9%
+  TF_FHTL → TF_JUNC_CENTER                             720    57.0      7    7.9%
+  TF_FH314 → TF_JUNC_RIGHT                             720    47.0      7    6.5%
+  TF_FH315 → TF_JUNC_RIGHT                             720    57.0      8    7.9%
+  TF_FH316 → TF_JUNC_RIGHT                             720    41.0     10    5.7%
+  TF_FH317 → TF_JUNC_RIGHT                             720    51.0     12    7.1%
+  TF_DO → TF_JUNC_RIGHT                                540     5.0      3    0.9%
+  TF_FR → TF_JUNC_RIGHT                                600    35.0      4    5.8%
+  TF_JUNC_CENTER → TF_JUNC_LEFT                       1440   343.0     18   23.8%
+  TF_JUNC_LEFT → LEFT_STAIR_T2S                       1200   659.0      4   54.9%
+  TF_JUNC_RIGHT → RIGHT_STAIR_T2S                     1200   236.0      4   19.7%
+  LEFT_STAIR_T2S → SF_JUNC_LEFT                       1200   659.0      6   54.9%
+  RIGHT_STAIR_T2S → SF_JUNC_RIGHT                     1200   236.0      6   19.7%
+
+  Evacuation Area        Capacity   Received    Util%
+  ----------------------------------------------------
+  EA_FRONT                   2592     1505.0    58.1%
+  EA_LEFT                     499      499.0   100.0%
+  EA_RIGHT                    342      342.0   100.0%
+
+  ⚠  BOTTLENECK EDGES (>=90% utilization):
+     GF_JUNC_LEFT → GF_MAINEXIT2  |  Flow: 1080.0/1080  (100.0%)
+     GF_MAINEXIT2 → EA_FRONT  |  Flow: 1080.0/1080  (100.0%)
+     SF_JUNC_LEFT → LEFT_STAIR_S2G  |  Flow: 1200.0/1200  (100.0%)
+     LEFT_STAIR_S2G → GF_JUNC_LEFT  |  Flow: 1200.0/1200  (100.0%)
+
+=================================================================
+  DAY: Friday   |   Total Evacuees (S) = 2300
+=================================================================
+
+  Optimal Total Cost Z = 95388.00 (person-seconds)
+
+  Edge                                                 Cap    Flow   Cost   Util%
+  --------------------------------------------------------------------------------
+  GF_FH106 → GF_JUNC_LEFT                              720    46.0      5    6.4%
+  GF_FH107 → GF_JUNC_LEFT                              720    34.0      7    4.7%
+  GF_FH108 → GF_JUNC_LEFT                              600    53.0      8    8.8%
+  GF_MTLABA → GF_JUNC_LEFT                             720    45.0     10    6.2%
+  GF_MTLABB → GF_JUNC_LEFT                             720    44.0     12    6.1%
+  GF_GS → GF_JUNC_LEFT                                 600    12.0      4    2.0%
+  GF_PSR → GF_JUNC_LEFT                                540     5.0      5    0.9%
+  GF_FR → GF_JUNC_LEFT                                 600    40.0      6    6.7%
+  GF_CSR → GF_JUNC_LEFT                                540     5.0      5    0.9%
+  GF_FH110 → GF_JUNC_CENTER                            720    53.0      5    7.4%
+  GF_JUNC_RIGHT → GF_JUNC_CENTER                      1440   421.0     17   29.2%
+  GF_JUNC_LEFT → GF_MAINEXIT1                         1080   379.0      3   35.1%
+  GF_JUNC_LEFT → GF_MAINEXIT2                         1080  1080.0      3  100.0%  ⚠ BOTTLENECK
+  GF_JUNC_LEFT → GF_MAINEXIT3                         1080    25.0      7    2.3%
+  GF_JUNC_CENTER → GF_MAINEXIT4                       1200   474.0      3   39.5%
+  GF_JUNC_RIGHT → GF_MAINEXIT6                        1080   342.0      3   31.7%
+  GF_MAINEXIT1 → EA_FRONT                             1080   379.0     13   35.1%
+  GF_MAINEXIT2 → EA_FRONT                             1080  1080.0     10  100.0%  ⚠ BOTTLENECK
+  GF_MAINEXIT3 → EA_LEFT                              1080    25.0      8    2.3%
+  GF_MAINEXIT4 → EA_LEFT                              1200   474.0      7   39.5%
+  GF_MAINEXIT6 → EA_RIGHT                             1080   342.0      8   31.7%
+  SF_FH201A → SF_JUNC_LEFT                             720    53.0      5    7.4%
+  SF_FH201B → SF_JUNC_LEFT                             720    59.0      7    8.2%
+  SF_FH202 → SF_JUNC_LEFT                              720    61.0      8    8.5%
+  SF_FH205 → SF_JUNC_LEFT                              720    46.0     12    6.4%
+  SF_FH206 → SF_JUNC_LEFT                              720    56.0     13    7.8%
+  SF_FH207 → SF_JUNC_LEFT                              720    46.0     15    6.4%
+  SF_RE → SF_JUNC_LEFT                                 600    42.0      4    7.0%
+  SF_CSAR → SF_JUNC_LEFT                               900    56.0      6    6.2%
+  SF_AVRA → SF_JUNC_CENTER                             900    53.0      5    5.9%
+  SF_AVRB → SF_JUNC_CENTER                             900    44.0      5    4.9%
+  SF_FH208 → SF_JUNC_CENTER                            720    51.0      7    7.1%
+  SF_FH209 → SF_JUNC_CENTER                            720    53.0      8    7.4%
+  SF_MMR → SF_JUNC_CENTER                              720    46.0      5    6.4%
+  SF_STD → SF_JUNC_CENTER                              720    53.0      5    7.4%
+  SF_OCL2 → SF_JUNC_RIGHT                              720    53.0      7    7.4%
+  SF_SL → SF_JUNC_RIGHT                                720    49.0      8    6.8%
+  SF_OCL → SF_JUNC_RIGHT                               720    50.0     10    6.9%
+  SF_CTA → SF_JUNC_RIGHT                               720    41.0     12    5.7%
+  SF_CTB → SF_JUNC_RIGHT                               720    48.0     13    6.7%
+  SF_CTC → SF_JUNC_RIGHT                               720    53.0     15    7.4%
+  SF_DO → SF_JUNC_RIGHT                                540     6.0      3    1.1%
+  SF_FR → SF_JUNC_RIGHT                                600    30.0      4    5.0%
+  SF_JUNC_CENTER → SF_JUNC_LEFT                       1440   104.0     18    7.2%
+  SF_JUNC_CENTER → SF_JUNC_RIGHT                      1440   196.0     18   13.6%
+  SF_JUNC_LEFT → LEFT_STAIR_S2G                       1200  1200.0      4  100.0%  ⚠ BOTTLENECK
+  SF_JUNC_RIGHT → RIGHT_STAIR_S2G                     1200   763.0      4   63.6%
+  LEFT_STAIR_S2G → GF_JUNC_LEFT                       1200  1200.0      6  100.0%  ⚠ BOTTLENECK
+  RIGHT_STAIR_S2G → GF_JUNC_RIGHT                     1200   763.0      6   63.6%
+  TF_FH301A → TF_JUNC_LEFT                             720    47.0      5    6.5%
+  TF_FH302 → TF_JUNC_LEFT                              720    47.0      7    6.5%
+  TF_FH303 → TF_JUNC_LEFT                              720    39.0      8    5.4%
+  TF_FH304 → TF_JUNC_LEFT                              720    43.0     10    6.0%
+  TF_FH305 → TF_JUNC_LEFT                              720    54.0     12    7.5%
+  TF_FH306 → TF_JUNC_LEFT                              720    46.0     13    6.4%
+  TF_FH307 → TF_JUNC_LEFT                              720    50.0     15    6.9%
+  TF_FH308 → TF_JUNC_CENTER                            720    47.0      5    6.5%
+  TF_FH309 → TF_JUNC_CENTER                            720    55.0      7    7.6%
+  TF_FH311A → TF_JUNC_CENTER                           720    50.0      8    6.9%
+  TF_FH311B → TF_JUNC_CENTER                           720    57.0      8    7.9%
+  TF_FHCL → TF_JUNC_CENTER                             900    40.0      5    4.4%
+  TF_OAC → TF_JUNC_CENTER                              720    51.0      5    7.1%
+  TF_FHTL → TF_JUNC_CENTER                             720    51.0      7    7.1%
+  TF_FH314 → TF_JUNC_RIGHT                             720    47.0      7    6.5%
+  TF_FH315 → TF_JUNC_RIGHT                             720    47.0      8    6.5%
+  TF_FH316 → TF_JUNC_RIGHT                             720    55.0     10    7.6%
+  TF_FH317 → TF_JUNC_RIGHT                             720    48.0     12    6.7%
+  TF_DO → TF_JUNC_RIGHT                                540     5.0      3    0.9%
+  TF_FR → TF_JUNC_RIGHT                                600    35.0      4    5.8%
+  TF_JUNC_CENTER → TF_JUNC_LEFT                       1440   351.0     18   24.4%
+  TF_JUNC_LEFT → LEFT_STAIR_T2S                       1200   677.0      4   56.4%
+  TF_JUNC_RIGHT → RIGHT_STAIR_T2S                     1200   237.0      4   19.8%
+  LEFT_STAIR_T2S → SF_JUNC_LEFT                       1200   677.0      6   56.4%
+  RIGHT_STAIR_T2S → SF_JUNC_RIGHT                     1200   237.0      6   19.8%
+
+  Evacuation Area        Capacity   Received    Util%
+  ----------------------------------------------------
+  EA_FRONT                   2592     1459.0    56.3%
+  EA_LEFT                     499      499.0   100.0%
+  EA_RIGHT                    342      342.0   100.0%
+
+  ⚠  BOTTLENECK EDGES (>=90% utilization):
+     GF_JUNC_LEFT → GF_MAINEXIT2  |  Flow: 1080.0/1080  (100.0%)
+     GF_MAINEXIT2 → EA_FRONT  |  Flow: 1080.0/1080  (100.0%)
+     SF_JUNC_LEFT → LEFT_STAIR_S2G  |  Flow: 1200.0/1200  (100.0%)
+     LEFT_STAIR_S2G → GF_JUNC_LEFT  |  Flow: 1200.0/1200  (100.0%)
+
+=================================================================
+  DAY: Saturday   |   Total Evacuees (S) = 1112
+=================================================================
+
+  Optimal Total Cost Z = 44600.00 (person-seconds)
+
+  Edge                                                 Cap    Flow   Cost   Util%
+  --------------------------------------------------------------------------------
+  GF_FH106 → GF_JUNC_LEFT                              720    53.0      5    7.4%
+  GF_MTLABA → GF_JUNC_LEFT                             720    30.0     10    4.2%
+  GF_GS → GF_JUNC_LEFT                                 600    12.0      4    2.0%
+  GF_PSR → GF_JUNC_LEFT                                540     2.0      5    0.4%
+  GF_FR → GF_JUNC_LEFT                                 600    20.0      6    3.3%
+  GF_CSR → GF_JUNC_LEFT                                540     2.0      5    0.4%
+  GF_FH110 → GF_JUNC_CENTER                            720    53.0      5    7.4%
+  GF_JUNC_RIGHT → GF_JUNC_CENTER                      1440     5.0     17    0.3%
+  GF_JUNC_LEFT → GF_MAINEXIT2                         1080   712.0      3   65.9%
+  GF_JUNC_CENTER → GF_MAINEXIT4                       1200    58.0      3    4.8%
+  GF_JUNC_RIGHT → GF_MAINEXIT6                        1080   342.0      3   31.7%
+  GF_MAINEXIT2 → EA_FRONT                             1080   712.0     10   65.9%
+  GF_MAINEXIT4 → EA_LEFT                              1200    58.0      7    4.8%
+  GF_MAINEXIT6 → EA_RIGHT                             1080   342.0      8   31.7%
+  SF_FH205 → SF_JUNC_LEFT                              720    45.0     12    6.2%
+  SF_FH207 → SF_JUNC_LEFT                              720    45.0     15    6.2%
+  SF_FH208 → SF_JUNC_CENTER                            720    53.0      7    7.4%
+  SF_FH209 → SF_JUNC_CENTER                            720    53.0      8    7.4%
+  SF_STD → SF_JUNC_CENTER                              720    47.0      5    6.5%
+  SF_OCL2 → SF_JUNC_RIGHT                              720    30.0      7    4.2%
+  SF_SL → SF_JUNC_RIGHT                                720    43.0      8    6.0%
+  SF_CTA → SF_JUNC_RIGHT                               720    53.0     12    7.4%
+  SF_DO → SF_JUNC_RIGHT                                540     2.0      3    0.4%
+  SF_FR → SF_JUNC_RIGHT                                600    15.0      4    2.5%
+  SF_JUNC_CENTER → SF_JUNC_LEFT                       1440   153.0     18   10.6%
+  SF_JUNC_LEFT → LEFT_STAIR_S2G                       1200   593.0      4   49.4%
+  SF_JUNC_RIGHT → RIGHT_STAIR_S2G                     1200   347.0      4   28.9%
+  LEFT_STAIR_S2G → GF_JUNC_LEFT                       1200   593.0      6   49.4%
+  RIGHT_STAIR_S2G → GF_JUNC_RIGHT                     1200   347.0      6   28.9%
+  TF_FH302 → TF_JUNC_LEFT                              720    53.0      7    7.4%
+  TF_FH304 → TF_JUNC_LEFT                              720    55.0     10    7.6%
+  TF_FH311A → TF_JUNC_CENTER                           720    57.0      8    7.9%
+  TF_FH311B → TF_JUNC_CENTER                           720    49.0      8    6.8%
+  TF_FHCL → TF_JUNC_CENTER                             900    36.0      5    4.0%
+  TF_OAC → TF_JUNC_CENTER                              720    51.0      5    7.1%
+  TF_FHTL → TF_JUNC_CENTER                             720    49.0      7    6.8%
+  TF_FH314 → TF_JUNC_RIGHT                             720    47.0      7    6.5%
+  TF_FH315 → TF_JUNC_RIGHT                             720    47.0      8    6.5%
+  TF_FH316 → TF_JUNC_RIGHT                             720    43.0     10    6.0%
+  TF_FH317 → TF_JUNC_RIGHT                             720    50.0     12    6.9%
+  TF_DO → TF_JUNC_RIGHT                                540     2.0      3    0.4%
+  TF_FR → TF_JUNC_RIGHT                                600    15.0      4    2.5%
+  TF_JUNC_CENTER → TF_JUNC_LEFT                       1440   242.0     18   16.8%
+  TF_JUNC_LEFT → LEFT_STAIR_T2S                       1200   350.0      4   29.2%
+  TF_JUNC_RIGHT → RIGHT_STAIR_T2S                     1200   204.0      4   17.0%
+  LEFT_STAIR_T2S → SF_JUNC_LEFT                       1200   350.0      6   29.2%
+  RIGHT_STAIR_T2S → SF_JUNC_RIGHT                     1200   204.0      6   17.0%
+
+  Evacuation Area        Capacity   Received    Util%
+  ----------------------------------------------------
+  EA_FRONT                   2592      712.0    27.5%
+  EA_LEFT                     499       58.0    11.6%
+  EA_RIGHT                    342      342.0   100.0%
+
+  ✓  No bottlenecks detected.
+
+
+==========================================================
+  WEEKLY SUMMARY
+  Day            Evacuees      Optimal Z       Status
+  ----------------------------------------------------
+  Monday             2335       96739.00  FEASIBLE
+  Tuesday            2306       95453.00  FEASIBLE
+  Wednesday          2302       95575.00  FEASIBLE
+  Thursday           2346       97790.00  FEASIBLE
+  Friday             2300       95388.00  FEASIBLE
+  Saturday           1112       44600.00  FEASIBLE
+
+=================================================================
+  FIXED WEEKLY EVACUATION ROUTES
+  (Derived from Thursday — worst-case occupancy)
+  Applied uniformly across all days of the week.
+=================================================================
+
+  --- GROUND FLOOR ---
+  GF_FH106        ->  GF_MAINEXIT2 -> EA_FRONT
+  GF_FH107        ->  GF_MAINEXIT2 -> EA_FRONT
+  GF_FH108        ->  GF_MAINEXIT2 -> EA_FRONT
+  GF_FH110        ->  GF_MAINEXIT4 -> EA_LEFT
+  GF_MTLABA       ->  GF_MAINEXIT2 -> EA_FRONT
+  GF_MTLABB       ->  GF_MAINEXIT2 -> EA_FRONT
+  GF_GS           ->  GF_MAINEXIT2 -> EA_FRONT
+  GF_PSR          ->  GF_MAINEXIT2 -> EA_FRONT
+  GF_FR           ->  GF_MAINEXIT2 -> EA_FRONT
+  GF_CSR          ->  GF_MAINEXIT2 -> EA_FRONT
+
+  --- SECOND FLOOR ---
+  SF_FH201A       ->  LEFT_STAIR_S2G -> GF_MAINEXIT2 -> EA_FRONT
+  SF_FH201B       ->  LEFT_STAIR_S2G -> GF_MAINEXIT2 -> EA_FRONT
+  SF_FH202        ->  LEFT_STAIR_S2G -> GF_MAINEXIT2 -> EA_FRONT
+  SF_FH205        ->  LEFT_STAIR_S2G -> GF_MAINEXIT2 -> EA_FRONT
+  SF_FH206        ->  LEFT_STAIR_S2G -> GF_MAINEXIT2 -> EA_FRONT
+  SF_FH207        ->  LEFT_STAIR_S2G -> GF_MAINEXIT2 -> EA_FRONT
+  SF_RE           ->  LEFT_STAIR_S2G -> GF_MAINEXIT2 -> EA_FRONT
+  SF_CSAR         ->  LEFT_STAIR_S2G -> GF_MAINEXIT2 -> EA_FRONT
+  SF_AVRA         ->  RIGHT_STAIR_S2G -> GF_MAINEXIT4 -> EA_LEFT
+  SF_AVRB         ->  RIGHT_STAIR_S2G -> GF_MAINEXIT4 -> EA_LEFT
+  SF_FH208        ->  RIGHT_STAIR_S2G -> GF_MAINEXIT4 -> EA_LEFT
+  SF_FH209        ->  RIGHT_STAIR_S2G -> GF_MAINEXIT4 -> EA_LEFT
+  SF_FH210        ->  RIGHT_STAIR_S2G -> GF_MAINEXIT4 -> EA_LEFT
+  SF_MMR          ->  RIGHT_STAIR_S2G -> GF_MAINEXIT4 -> EA_LEFT
+  SF_STD          ->  RIGHT_STAIR_S2G -> GF_MAINEXIT4 -> EA_LEFT
+  SF_OCL2         ->  RIGHT_STAIR_S2G -> GF_MAINEXIT4 -> EA_LEFT
+  SF_SL           ->  RIGHT_STAIR_S2G -> GF_MAINEXIT4 -> EA_LEFT
+  SF_OCL          ->  RIGHT_STAIR_S2G -> GF_MAINEXIT4 -> EA_LEFT
+  SF_CTA          ->  RIGHT_STAIR_S2G -> GF_MAINEXIT4 -> EA_LEFT
+  SF_CTB          ->  RIGHT_STAIR_S2G -> GF_MAINEXIT4 -> EA_LEFT
+  SF_CTC          ->  RIGHT_STAIR_S2G -> GF_MAINEXIT4 -> EA_LEFT
+  SF_DO           ->  RIGHT_STAIR_S2G -> GF_MAINEXIT4 -> EA_LEFT
+  SF_FR           ->  RIGHT_STAIR_S2G -> GF_MAINEXIT4 -> EA_LEFT
+
+  --- THIRD FLOOR ---
+  TF_FH301A       ->  LEFT_STAIR_T2S -> LEFT_STAIR_S2G -> GF_MAINEXIT2 -> EA_FRONT
+  TF_FH302        ->  LEFT_STAIR_T2S -> LEFT_STAIR_S2G -> GF_MAINEXIT2 -> EA_FRONT
+  TF_FH303        ->  LEFT_STAIR_T2S -> LEFT_STAIR_S2G -> GF_MAINEXIT2 -> EA_FRONT
+  TF_FH304        ->  LEFT_STAIR_T2S -> LEFT_STAIR_S2G -> GF_MAINEXIT2 -> EA_FRONT
+  TF_FH305        ->  LEFT_STAIR_T2S -> LEFT_STAIR_S2G -> GF_MAINEXIT2 -> EA_FRONT
+  TF_FH306        ->  LEFT_STAIR_T2S -> LEFT_STAIR_S2G -> GF_MAINEXIT2 -> EA_FRONT
+  TF_FH307        ->  LEFT_STAIR_T2S -> LEFT_STAIR_S2G -> GF_MAINEXIT2 -> EA_FRONT
+  TF_FH308        ->  LEFT_STAIR_T2S -> LEFT_STAIR_S2G -> GF_MAINEXIT2 -> EA_FRONT
+  TF_FH309        ->  LEFT_STAIR_T2S -> LEFT_STAIR_S2G -> GF_MAINEXIT2 -> EA_FRONT
+  TF_FH311A       ->  LEFT_STAIR_T2S -> LEFT_STAIR_S2G -> GF_MAINEXIT2 -> EA_FRONT
+  TF_FH311B       ->  LEFT_STAIR_T2S -> LEFT_STAIR_S2G -> GF_MAINEXIT2 -> EA_FRONT
+  TF_FHCL         ->  LEFT_STAIR_T2S -> LEFT_STAIR_S2G -> GF_MAINEXIT2 -> EA_FRONT
+  TF_OAC          ->  LEFT_STAIR_T2S -> LEFT_STAIR_S2G -> GF_MAINEXIT2 -> EA_FRONT
+  TF_FHTL         ->  LEFT_STAIR_T2S -> LEFT_STAIR_S2G -> GF_MAINEXIT2 -> EA_FRONT
+  TF_FH314        ->  RIGHT_STAIR_T2S -> RIGHT_STAIR_S2G -> GF_MAINEXIT4 -> EA_LEFT
+  TF_FH315        ->  RIGHT_STAIR_T2S -> RIGHT_STAIR_S2G -> GF_MAINEXIT4 -> EA_LEFT
+  TF_FH316        ->  RIGHT_STAIR_T2S -> RIGHT_STAIR_S2G -> GF_MAINEXIT4 -> EA_LEFT
+  TF_FH317        ->  RIGHT_STAIR_T2S -> RIGHT_STAIR_S2G -> GF_MAINEXIT4 -> EA_LEFT
+  TF_DO           ->  RIGHT_STAIR_T2S -> RIGHT_STAIR_S2G -> GF_MAINEXIT4 -> EA_LEFT
+  TF_FR           ->  RIGHT_STAIR_T2S -> RIGHT_STAIR_S2G -> GF_MAINEXIT4 -> EA_LEFT
+
+=================================================================
+  FIXED ROUTE FEASIBILITY CHECK — ALL DAYS
+  Verifying Thursday-derived routes hold across the week.
+=================================================================
+
+  Monday (FEASIBLE)
+    NOTE  SF_STD: fixed→EA_LEFT, Monday→SF_STD
+
+  Tuesday (FEASIBLE)
+    All rooms reach the same evacuation area as fixed plan.
+
+  Wednesday (FEASIBLE)
+    All rooms reach the same evacuation area as fixed plan.
+
+  Thursday (FEASIBLE)
+    All rooms reach the same evacuation area as fixed plan.
+
+  Friday (FEASIBLE)
+    NOTE  SF_FH210: fixed→EA_LEFT, Friday→SF_FH210
+
+  Saturday (FEASIBLE)
+    NOTE  GF_FH107: fixed→EA_FRONT, Saturday→GF_FH107
+    NOTE  GF_FH108: fixed→EA_FRONT, Saturday→GF_FH108
+    NOTE  GF_MTLABB: fixed→EA_FRONT, Saturday→GF_MTLABB
+    NOTE  SF_FH201A: fixed→EA_FRONT, Saturday→SF_FH201A
+    NOTE  SF_FH201B: fixed→EA_FRONT, Saturday→SF_FH201B
+    NOTE  SF_FH202: fixed→EA_FRONT, Saturday→SF_FH202
+    NOTE  SF_FH206: fixed→EA_FRONT, Saturday→SF_FH206
+    NOTE  SF_RE: fixed→EA_FRONT, Saturday→SF_RE
+    NOTE  SF_CSAR: fixed→EA_FRONT, Saturday→SF_CSAR
+    NOTE  SF_AVRA: fixed→EA_LEFT, Saturday→SF_AVRA
+    NOTE  SF_AVRB: fixed→EA_LEFT, Saturday→SF_AVRB
+    NOTE  SF_FH208: fixed→EA_LEFT, Saturday→EA_FRONT
+    NOTE  SF_FH209: fixed→EA_LEFT, Saturday→EA_FRONT
+    NOTE  SF_FH210: fixed→EA_LEFT, Saturday→SF_FH210
+    NOTE  SF_MMR: fixed→EA_LEFT, Saturday→SF_MMR
+    NOTE  SF_STD: fixed→EA_LEFT, Saturday→EA_FRONT
+    NOTE  SF_OCL2: fixed→EA_LEFT, Saturday→EA_RIGHT
+    NOTE  SF_SL: fixed→EA_LEFT, Saturday→EA_RIGHT
+    NOTE  SF_OCL: fixed→EA_LEFT, Saturday→SF_OCL
+    NOTE  SF_CTA: fixed→EA_LEFT, Saturday→EA_RIGHT
+    NOTE  SF_CTB: fixed→EA_LEFT, Saturday→SF_CTB
+    NOTE  SF_CTC: fixed→EA_LEFT, Saturday→SF_CTC
+    NOTE  SF_DO: fixed→EA_LEFT, Saturday→EA_RIGHT
+    NOTE  SF_FR: fixed→EA_LEFT, Saturday→EA_RIGHT
+    NOTE  TF_FH301A: fixed→EA_FRONT, Saturday→TF_FH301A
+    NOTE  TF_FH303: fixed→EA_FRONT, Saturday→TF_FH303
+    NOTE  TF_FH305: fixed→EA_FRONT, Saturday→TF_FH305
+    NOTE  TF_FH306: fixed→EA_FRONT, Saturday→TF_FH306
+    NOTE  TF_FH307: fixed→EA_FRONT, Saturday→TF_FH307
+    NOTE  TF_FH308: fixed→EA_FRONT, Saturday→TF_FH308
+    NOTE  TF_FH309: fixed→EA_FRONT, Saturday→TF_FH309
+    NOTE  TF_FH314: fixed→EA_LEFT, Saturday→EA_RIGHT
+    NOTE  TF_FH315: fixed→EA_LEFT, Saturday→EA_RIGHT
+    NOTE  TF_FH316: fixed→EA_LEFT, Saturday→EA_RIGHT
+    NOTE  TF_FH317: fixed→EA_LEFT, Saturday→EA_RIGHT
+    NOTE  TF_DO: fixed→EA_LEFT, Saturday→EA_RIGHT
+    NOTE  TF_FR: fixed→EA_LEFT, Saturday→EA_RIGHT
