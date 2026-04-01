@@ -24,34 +24,6 @@ project/
 ```
 
 ---
-
-## ▶️ How to Run (Ubuntu - Terminal Method)
-
-### 1. Install SageMath
-
-Open terminal and run:
-
-```
-sudo apt update
-sudo apt install sagemath
-```
-
-### 2. Run the Sage file
-
-Navigate to your project folder:
-
-```
-cd path/to/your/project
-```
-
-Run the code:
-
-```
-Sagemath Code (final).ipynb
-```
-
----
-
 ## 📓 How to Run (Jupyter Notebook Method)
 
 ### 1. Launch Jupyter using SageMath
@@ -63,7 +35,7 @@ sage -n jupyter
 ### 2. Open your notebook
 
 * A browser will open automatically
-* Click  `sagemath code (final).ipynb` file
+* Click  `sagemath code (Obstructed).ipynb` or `sagemath code (Baseline).ipynb`  file
 
 ### 3. Run the notebook
 
