@@ -1,12 +1,12 @@
 # Powerpuffs
 
-## 📌 Description
+## Description
 
 SageMath was used to implement Capacitated Multi-Source Multi-Sink Minimum Cost Flow Model to optimize emergency evacuation routes in Federizo Hall in Bulacan State University - Main Campus. The project models the building as directed weighted graph and applies Successive Shortest Path Algorithm to distribute the evacuees across exits and evacuation sites under baseline and obstructed scenarios.
 
 ---
 
-## ⚙️ Requirements
+## Requirements
 
 * SageMath
 * Ubuntu (or any Linux-based system)
@@ -14,7 +14,7 @@ SageMath was used to implement Capacitated Multi-Source Multi-Sink Minimum Cost 
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 project/
@@ -24,7 +24,7 @@ project/
 ```
 
 ---
-## 📓 How to Run (Jupyter Notebook Method)
+## How to Run (Jupyter Notebook Method)
 
 ### 1. Launch Jupyter using SageMath
 
@@ -43,14 +43,9 @@ sage -n jupyter
 
 ---
 
-## 📊 Outputs
 
-* Generated plots are saved in the `/outputs` folder
-* Result files (if any) are also included
 
----
-
-## 👥 Members
+## Members
 
 * Agustin, Dale Madison B.
 * Navoa, Rachelle Anne L.
@@ -58,7 +53,7 @@ sage -n jupyter
 
 ---
 
-## 📝 Notes
+## Notes
 
 * Ensure SageMath is properly installed before running the code
 * File paths should be correct when accessing data or saving outputs
